@@ -9,7 +9,7 @@ const parse = require('git-url-parse');
 const gitRoot = cp.execSync('git rev-parse --show-toplevel').toString('utf8').trim();
 process.chdir(gitRoot);
 
-commander.command('install-bundle <remote url>');
+commander.command('install-bundle <remote url> --force');
 commander.parse(process.argv);
 
 if (commander.args.length < 1) {
